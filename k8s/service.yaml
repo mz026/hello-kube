@@ -10,3 +10,22 @@ spec:
   type: NodePort
   selector:
     app: hello-kube
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: db
+  name: db
+spec:
+  ports:
+  - name: "5432"
+    port: 5432
+    targetPort: 5432
+  selector:
+    app: db
+status:
+  loadBalancer: {}
