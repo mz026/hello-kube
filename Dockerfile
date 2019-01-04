@@ -6,8 +6,6 @@ RUN apt-get update && apt-get install -qq -y build-essential nodejs libsqlite3-d
 COPY . .
 # COPY Gemfile Gemfile
 RUN bundle install
-RUN bundle exec rake db:migrate
-
 
 # The default command that gets ran will be to start the Unicorn server.
 CMD bundle exec rails s
