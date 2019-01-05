@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hello-kube
-        image: mz026/hello-kube:0.1
+        image: mz026/hello-kube:0.2
         imagePullPolicy: Never
         ports:
           - containerPort: 3000
